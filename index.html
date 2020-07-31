@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Timer</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aldrich&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="./js/index.js" defer></script>
+  </head>
+  <body>
+    <main class="timer">
+      <header class="timer__header">
+        <h1 class="timer__header-title">Timer</h1>
+        <img
+          src="./assets/icons/stopwatch.png"
+          alt="stopwatch"
+          class="timer__img"
+        />
+      </header>
+      <div class="timer__clock">
+        <section class="clock">
+          <input
+            type="number"
+            name="hours"
+            id="hours"
+            value="00"
+            min="0"
+            max="99"
+            class="timer__input"
+            data-timer-input
+          />
+          <label for="hours" class="timer__label">hours</label>
+        </section>
+        <section class="clock">
+          <input
+            type="number"
+            name="minutes"
+            id="minutes"
+            value="00"
+            min="0"
+            max="59"
+            class="timer__input"
+            data-timer-input
+          />
+          <label for="minutes" class="timer__label">minutes</label>
+        </section>
+        <section class="clock">
+          <input
+            type="number"
+            name="seconds"
+            id="seconds"
+            value="00"
+            min="0"
+            max="59"
+            class="timer__input"
+            data-timer-input
+          />
+          <label for="seconds" class="timer__label">seconds</label>
+        </section>
+      </div>
+      <div class="timer__buttons">
+        <button class="button" id="button__edit" data-edit>
+          <svg class="button__icon">
+            <use xlink:href="./assets/icons/sprite.svg#done"></use>
+          </svg>
+        </button>
+        <button class="button" id="button__play" disabled data-play>
+          <svg class="button__icon">
+            <use xlink:href="./assets/icons/sprite.svg#play"></use>
+          </svg>
+        </button>
+        <button class="button" id="button__replay" data-replay>
+          <svg class="button__icon">
+            <use xlink:href="./assets/icons/sprite.svg#replay"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="timer__audio">
+        <audio
+          src="./assets/sounds/alarm.mp3"
+          id="audio"
+          loop
+          data-audio
+        ></audio>
+        <button class="button hide" id="button__timer" data-alarm>
+          <svg class="button__icon button__icon--alarm">
+            <use xlink:href="./assets/icons/sprite.svg#alarm"></use>
+          </svg>
+        </button>
+      </div>
+    </main>
+  </body>
+</html>
